@@ -1,0 +1,6 @@
+[AttDefInfo]
+DisplayName=PhastaLegacy
+SolverName=phastalegacy
+[1]
+AttDefs=simModelerPHASTA/legacy
+PatternInfo=

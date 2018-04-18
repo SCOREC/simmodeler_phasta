@@ -1,0 +1,87 @@
+#attdefs
+13 
+
+type "comp3":void {
+  R type "vector magnitude":double E 1 d < 0 >;
+  R type "vector direction":tensor1 3 E 1 d < "0.0" "0.0" "0.0" >;
+} e < v e f r m >;
+image "comp3_elas":"comp3";
+
+type "comp1":void {
+  R type "vector magnitude":double E 1 d < 0 >;
+  R type "vector direction":tensor1 3 E 1 d < "0.0" "0.0" "0.0" >;
+} e < v e f r m >;
+image "comp1_elas":"comp1";
+
+type "traction vector":tensor1 3 E 1 e < e f >;
+image "traction vector melas":"traction vector";
+
+###################################################
+image "phasta" : "problem definition" {
+  O type "initial temperature":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial velocity":tensor1 3 E 1 e < r m > ;
+  O type "initial pressure":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial scalar_1":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial scalar_2":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial scalar_3":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial scalar_4":tensor0 3 E 1 d < 0 > e < r m > ;
+
+  O type "initial value_sc":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial x_derivative":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial y_derivative":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial xy_derivative":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial xx_derivative":tensor0 3 E 1 d < 0 > e < r m > ;
+  O type "initial yy_derivative":tensor0 3 E 1 d < 0 > e < r m > ;
+
+  O type "material type":int d < 0 > e < r m > ;
+
+  O comp3;
+  O comp1;
+  O type "density":tensor0 3 E 1 d < 0 > e < f > ; #e<r> changed to e<f> --CWS 18/3/2009
+  O type "pressure":tensor0 3 E 1 d < 0 > e < v e f > ; #e< e f> changed to e< v e f> --CWS 15/01/2014
+  O type "temperature":tensor0 3 E 1 d < 0 > e < f > ;
+  O type "scalar_1":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+  O type "scalar_2":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+  O type "scalar_3":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+  O type "scalar_4":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+
+  O type "value_sc":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+  O type "x_derivative":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+  O type "y_derivative":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+  O type "xy_derivative":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+  O type "xx_derivative":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+  O type "yy_derivative":tensor0 3 E 1 d < 0 > e < v e f r m > ;
+
+  O type "spebc":double E 0 d < 0 > e < v e f r m > ;
+  O type "periodic slave":int E 0 d < 0 > e < v e f r m > ;
+  O type "take bc from ic":int E 0 d < 0 > e < v e f r m > ;
+
+  O type "surf ID":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "mass flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "natural pressure":tensor0 3 E 1 d < 0 > e < e f > ;
+  O "traction vector";
+  O type "heat flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "DG interface":int E 0 d < 0 > e < f > ;
+
+  O type "scalar_1 flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "scalar_2 flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "scalar_3 flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "scalar_4 flux":tensor0 3 E 1 d < 0 > e < e f > ;
+
+  O type "value_sc flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "x_derivative flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "y_derivative flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "xy_derivative flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "xx_derivative flux":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "yy_derivative flux":tensor0 3 E 1 d < 0 > e < e f > ;
+
+  O type "turbulence wall":tensor0 3 E 1 d < 0 > e < e f > ;
+  O type "integrated mass":tensor0 3 E 1 d < 0 > e < e f > ;
+
+  O type "rigid body":double E 1 d < 0 > e < r > ;
+};
+
+
+image "phasta" : "output" {
+};
+

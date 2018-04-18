@@ -1,0 +1,7 @@
+atd 13
+
+image "phasta" : "analysis" root {
+  C "problem definition":"phasta" 0 1 1;
+  C "output":"phasta" 0 1 1;
+};
+
