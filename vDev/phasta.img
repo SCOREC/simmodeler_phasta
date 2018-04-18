@@ -78,7 +78,7 @@ image "phasta" : "problem definition" {
   O type "turbulence wall":tensor0 3 E 1 d < 0 > e < e f > ;
   O type "integrated mass":tensor0 3 E 1 d < 0 > e < e f > ;
 
-  O type "rigid body":double E 1 d < 0 > e < r > ;
+  O type "rigid body":int E 0 d < 0 > e < r > ;
 };
 
 
